@@ -1,9 +1,16 @@
+@import "../../global.scss";
+
 .intro{
     background-color: white;
     display: flex;
 
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+
     .left{
-        flex:0.5;
+        flex:0.55;
         overflow: hidden;
         .imgContainer{
             width: 100%;
@@ -13,14 +20,26 @@
             align-items: center;
             justify-content: center;
             float: left;
+
+            @include mobile{
+                margin-left: 0;
+            }
+            
             img{
                 border-radius: 50%;
-                height: 65%;
+                height: 60%;
+                border-width: 10px;
+                border-style: solid;
+                border-color: blueviolet;
+
+                @include mobile{
+                    height: 60%;
+                }
             }
         }
     }
     .right{
-        flex:0.5;
+        flex:0.45;
 
         .wrapper{
             width: 100%;
@@ -30,9 +49,18 @@
             flex-direction: column;
             justify-content: center;
 
+            @include mobile{
+                padding-left: 0;
+                align-items: center;
+            }
+
             h1{
                 font-size: 60px;
                 margin: 10px 0;
+
+                @include mobile{
+                    font-size: 40px;
+                }
             }
             h2{
                 font-size: 35px;;

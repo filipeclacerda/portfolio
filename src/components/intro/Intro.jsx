@@ -27,11 +27,11 @@ export default function Intro() {
         <div className="wrapper">
           <h2>Olá, me chamo</h2>
           <h1>Filipe Lacerda</h1>
-          <h3>Desenvolvedor Freelancer <span ref={textRef}></span></h3>
-        </div>
+          <h3>Desenvolvedor <span ref={textRef}></span></h3>
         <a href="#portfolio">
           <KeyboardArrowDownIcon className="arrow"/>
         </a>
+        </div>
       </div>
     
     </div>
