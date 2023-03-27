@@ -27,9 +27,11 @@
             
             img{
                 border-radius: 50%;
-                height: 60%;
+                height: 80%;
                 border-width: 10px;
+                background-color: blueviolet;
                 border-style: solid;
+                mix-blend-mode: color;
                 border-color: blueviolet;
 
                 @include mobile{

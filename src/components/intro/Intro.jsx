@@ -12,7 +12,7 @@ export default function Intro() {
       showCursor: true,
       backDelay:1500,
       backSpeed:60,
-      strings: ["PHP", "Java", "React", "React Native", "Kotlin"],
+      strings: ["PHP", "Java", "React", "React Native", "HTML/CSS", "JavaScript" ,"Kotlin"],
     })
   },[])
 
@@ -20,7 +20,7 @@ export default function Intro() {
     <div className="intro" id="intro">
       <div className="left">
         <div className="imgContainer">
-          <img src="assets/photo_fl.jpg" alt="" />
+          <img src="assets/filipelacerda.jpg" alt="" style={{mixBlendMode: 'multiply'}} />
         </div>
       </div>
       <div className="right">
