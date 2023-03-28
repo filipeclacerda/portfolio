@@ -1,25 +1,53 @@
-import "./menu.scss"
+import "./menu.scss";
 
 export default function Menu({ menuOpen, setMenuOpen }) {
   return (
     <div className={"menu " + (menuOpen && "active")}>
-        <ul>
-            <li>
-                <a href="#intro" onClick={() => {setMenuOpen(false)}}>Home</a>
-            </li>
-            <li>
-                <a href="#portfolio" onClick={() => {setMenuOpen(false)}}>Portfolio</a>
-            </li>
-            <li>
-                <a href="#works" onClick={() => {setMenuOpen(false)}}>Trabalhos</a>
-            </li>
-            <li>
+      <ul>
+        <li>
+          <a
+            href="#intro"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="#portfolio"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a
+            href="#works"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            Trabalhos
+          </a>
+        </li>
+        {/* <li>
                 <a href="#testimonials" onClick={() => {setMenuOpen(false)}}>Recomendações</a>
-            </li>
-            <li>
-                <a href="#contact" onClick={() => {setMenuOpen(false)}}>Contato</a>
-            </li>
-        </ul>
+            </li> */}
+        <li>
+          <a
+            href="#contact"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            Contato
+          </a>
+        </li>
+      </ul>
     </div>
-  )
+  );
 }

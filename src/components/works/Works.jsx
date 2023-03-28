@@ -6,47 +6,53 @@ export default function Works() {
   const data = [
     {
       id: "1",
-      icon: "./assets/mobile.png",
-      title: "Web Design",
-      desc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      img:
-        "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
+      icon: "./assets/globe.png",
+      title: "Analista de Sistemas",
+      company: "CAEd/UFJF",
+      desc: "No CAEd/UFJF sou responsável por desenvolver e manter sistemas e tecnologias que suportam a avaliação da educação, incluindo gerenciamento de conteúdo, publicação dos resultados, disponibilização das avaliações e outros recursos de tecnologia educacional. Trabalho em colaboração com outros desenvolvedores, designers instrucionais e outros profissionais de tecnologia para garantir que a plataforma de educação atenda às necessidades dos usuários finais e ofereça uma experiência de aprendizado eficaz e envolvente.",
+      img: "https://i.ytimg.com/vi/k97tvSpENfo/maxresdefault.jpg",
     },
     {
       id: "2",
+      company: "RP Consultoria e Sistemas",
       icon: "./assets/globe.png",
-      title: "Mobile Application",
-      desc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img:
-        "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
+      title: "Desenvolvedor PHP (Estágio)",
+      desc: "Minha função era dar manutenção e desenvolver novos módulos para websites voltados para a gestão de franquias. Utilizando as tecnologias PHP, JQuery, HTML, CSS e MySQL.",
+      img: "https://i.imgur.com/QnJGCoe.png",
     },
     {
       id: "3",
-      icon: "./assets/writing.png",
-      title: "Branding",
-      desc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img:
-        "https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg",
+      icon: "./assets/mobile.png",
+      company: "Autônomo",
+      title: "Desnvolvedor Android (Freelancer)",
+      desc: "Desenvolvimento de um aplicativo em Java, para uma empresa que presta serviços de manutenção, voltado para a designação de tarefas aos funcionários, incluindo recursos como coleta de assinaturas, envio de imagens, etc.",
+      img: "https://i.imgur.com/IhbagPr.png",
+    },
+    {
+      id: "4",
+      icon: "./assets/globe.png",
+      company: "Granbery Consultoria",
+      title: "Desnvolvedor front-end (Estágio)",
+      desc: "Granbery Consultoria é a Empresa Júnior do Instituto Metodista Granbery. Minha função era realizar projetos relacionados à área de sistemas de informação, como a criação de websites e sistemas para pessoas físicas ou jurídicas.",
+      img: "https://i.imgur.com/Qiu1QV5.png",
     },
   ];
 
   const handleClick = (way) => {
     way === "left"
-      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
+      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 3)
       : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
   };
-  
+
   return (
     <div className="works" id="works">
+      <h1>Experiência profissional</h1>
       <div
         className="slider"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
         {data.map((d) => (
-          <div className="container">
+          <div className="container" key={d.id}>
             <div className="item">
               <div className="left">
                 <div className="leftContainer">
@@ -54,15 +60,12 @@ export default function Works() {
                     <img src={d.icon} alt="" />
                   </div>
                   <h2>{d.title}</h2>
+                  <strong>{d.company}</strong>
                   <p>{d.desc}</p>
-                  <span>Projects</span>
                 </div>
               </div>
               <div className="right">
-                <img
-                  src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"
-                  alt=""
-                />
+                <img src={d.img} alt="" />
               </div>
             </div>
           </div>
